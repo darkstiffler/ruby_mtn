@@ -12,8 +12,19 @@
  *= require_tree .
  */
 
+li {
+	padding: 5px;
+	border: 1px black solid;
+	margin: 2px;
+}
+#view {
+	width: 960px;
+}
 #container {
-	height: 200px;
+	position: relative;
+	top: 30px;
+	margin: 0 auto;
+	height: auto;
 	width: 200px;
 	padding: 8px;
 	border: 2px solid #000;

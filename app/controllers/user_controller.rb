@@ -1,6 +1,7 @@
 class UserController < ApplicationController
   
   def new
+  	puts "WEREHERE"
   end
 
   def create 
@@ -10,7 +11,7 @@ class UserController < ApplicationController
   		user_data[:name].length < 3 then
   		redirect_to user_new_path
   	else
-	  	user = User.create user_params
+	  	user = User.create user_data
   		redirect_to users_path
 	  end
   end
