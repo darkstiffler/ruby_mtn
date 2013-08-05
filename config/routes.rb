@@ -1,5 +1,7 @@
 RubyMtn::Application.routes.draw do
-  get "user/new"
+  get "user/new" => "user#new"
+  post "user/new" => "user#create"
+  get "users/" => "user#list"
   get "user/create"
   get "user/delete"
 
