@@ -6,7 +6,8 @@ class UserController < ApplicationController
   def create 
   	user_data = user_params
 
-  	if user_data[:password].length < 5 then
+  	if user_data[:password].length < 5 or
+  		user_data[:name].length < 3 then
   		redirect_to user_new_path
   	else
 	  	user = User.create user_params
